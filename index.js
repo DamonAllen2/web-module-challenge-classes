@@ -44,7 +44,22 @@ class Airplane {
 */
 
 class Person {
-  
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+    this.stomach = [];
+  }
+  eat(food) {
+    if(this.stomach.length < 10) {
+      this.stomach.push(food);
+    }
+  }
+  poop() {
+      this.stomach = [];
+  }
+  toString() {
+    return `${this.name}, ${this.age}`
+  }
 }
 
 /*
@@ -62,7 +77,12 @@ class Person {
 */
 
 class Car {
-  
+  constructor(model, MPG) {
+    this.model = model;
+    this.MPG = MPG;
+    this.tank = 0;
+    this.odometer = 0;
+  }
 }
 
 /*
